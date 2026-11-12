@@ -14,48 +14,12 @@
     <string name="login_registrate">Regístrate</string>
     <string name="login_frase">"El dolor que sientes hoy, es la fuerza que sentirás mañana."</string>
 
-    <!-- Mensajes de validación -->
+    <!-- Errores y mensajes -->
     <string name="error_correo_vacio">Ingresa tu correo</string>
     <string name="error_correo_invalido">Correo no válido</string>
     <string name="error_contrasena_vacia">Ingresa tu contraseña</string>
     <string name="error_contrasena_corta">Mínimo 6 caracteres</string>
     <string name="error_credenciales">Correo o contraseña incorrectos</string>
-    <string name="msg_bienvenida">¡Bienvenido de nuevo!</string>
+    <string name="msg_bienvenida">¡Bienvenido de nuevo a PRO GYM! 💪</string>
     <string name="msg_proximamente">Próximamente disponible</string>
-
-    <!-- Navegación inferior -->
-    <string name="nav_inicio">Inicio</string>
-    <string name="nav_misiones">Misiones</string>
-    <string name="nav_ranking">Ranking</string>
-    <string name="nav_perfil">Perfil</string>
-
-    <!-- Ruta de entrenamiento -->
-    <string name="ruta_empezar">EMPEZAR</string>
-    <string name="ruta_empieza_aqui">¡EMPIEZA AQUÍ!</string>
-    <string name="ruta_bloqueado">🔒 Completa los niveles anteriores para desbloquear</string>
-    <string name="ruta_unidad">Unidad %1$d</string>
-    <string name="nivel_empezar">Empezar +%1$d XP</string>
-    <string name="nivel_practicar">Practicar de nuevo +%1$d XP</string>
-    <string name="nivel_xp">⚡ %1$d XP</string>
-    <string name="nivel_completado">¡Nivel completado! +%1$d XP 🔥</string>
-    <string name="ruta_terminada">🏆 ¡Completaste toda la ruta! Eres una máquina</string>
-
-    <!-- Misiones -->
-    <string name="misiones_titulo">Misiones diarias</string>
-    <string name="misiones_subtitulo">Se reinician cada día a medianoche</string>
-    <string name="mision_xp">Gana 30 XP</string>
-    <string name="mision_lecciones">Completa 2 entrenamientos</string>
-    <string name="mision_racha">Mantén tu racha activa</string>
-
-    <!-- Ranking -->
-    <string name="ranking_liga">Liga %1$s</string>
-    <string name="ranking_subtitulo">Los 3 primeros suben de liga esta semana</string>
-
-    <!-- Perfil -->
-    <string name="perfil_miembro">Miembro de PRO GYM 💪</string>
-    <string name="perfil_racha">Días de racha</string>
-    <string name="perfil_xp">XP total</string>
-    <string name="perfil_niveles">Niveles</string>
-    <string name="perfil_liga">Liga</string>
-    <string name="perfil_cerrar_sesion">Cerrar sesión</string>
 </resources>

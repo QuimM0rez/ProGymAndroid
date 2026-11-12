@@ -5,36 +5,46 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/duo_bg"
+    android:background="@color/progym_dark"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- ===== TOP BAR: ROSA/FUCSIA EXACTO AL DE LA IMAGEN ===== -->
+    <!-- ===== TOP BAR: ESTILO GAMIFICADO PRO GYM ===== -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@color/duo_topbar_pink"
+        android:background="@color/progym_nav"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingHorizontal="20dp">
+        android:paddingHorizontal="18dp">
 
-        <!-- Bandera -->
+        <!-- Logo PRO GYM -->
         <ImageView
-            android:id="@+id/ivBandera"
-            android:layout_width="36dp"
-            android:layout_height="26dp"
-            android:contentDescription="Bandera de idioma/curso"
-            android:src="@drawable/ic_flag_france" />
+            android:id="@+id/ivLogoHeader"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:contentDescription="Logo PRO GYM"
+            android:src="@drawable/logo_progym" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.08"
+            android:text="PRO GYM"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1" />
 
-        <!-- 🔥 Fuego / Racha 12 -->
+        <!-- 🔥 Racha de días -->
         <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:importantForAccessibility="no"
             android:src="@drawable/ic_fire"
             app:tint="@color/duo_fire" />
@@ -43,36 +53,36 @@
             android:id="@+id/tvRacha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="16dp"
             android:fontFamily="sans-serif-black"
-            android:text="12"
-            android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:text="7"
+            android:textColor="@color/duo_fire"
+            android:textSize="16sp" />
 
-        <!-- 💎 Diamante / Gemas 500 -->
+        <!-- ⚡ Puntos XP -->
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:importantForAccessibility="no"
-            android:src="@drawable/ic_duo_gem"
+            android:src="@drawable/ic_bolt"
             app:tint="@color/duo_gem" />
 
         <TextView
-            android:id="@+id/tvGemas"
+            android:id="@+id/tvXp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="16dp"
             android:fontFamily="sans-serif-black"
-            android:text="500"
-            android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:text="450"
+            android:textColor="@color/duo_gem"
+            android:textSize="16sp" />
 
-        <!-- ❤️ Corazón / Vidas 5 -->
+        <!-- ❤️ Energía / Vidas -->
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:importantForAccessibility="no"
             android:src="@drawable/ic_heart"
             app:tint="@color/duo_heart" />
@@ -81,199 +91,368 @@
             android:id="@+id/tvVidas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
+            android:layout_marginStart="4dp"
             android:fontFamily="sans-serif-black"
             android:text="5"
-            android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:textColor="@color/duo_heart"
+            android:textSize="16sp" />
     </LinearLayout>
 
-    <!-- ===== CAMINO EN ZIGZAG (Con botón dorado, botón rosa con EMPEZAR y personaje) ===== -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/progym_divider" />
+
+    <!-- ===== CONTENIDO DEL MEDIO: RUTINAS Y RETOS EN CAMINO GAMIFICADO ===== -->
     <ScrollView
-        android:id="@+id/scrollCamino"
+        android:id="@+id/scrollContenido"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
         android:fillViewport="true"
-        android:paddingVertical="32dp">
+        android:paddingVertical="20dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="24dp">
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
 
-            <!-- 1. Círculo Dorado 1 (Superior) -->
-            <FrameLayout
-                android:id="@+id/nodo1"
-                android:layout_width="78dp"
-                android:layout_height="78dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp">
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:src="@drawable/ic_check"
-                    app:tint="@color/duo_gold_check" />
-            </FrameLayout>
-
-            <!-- 2. Círculo Dorado 2 -->
-            <FrameLayout
-                android:id="@+id/nodo2"
-                android:layout_width="78dp"
-                android:layout_height="78dp"
-                android:layout_below="@id/nodo1"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="-45dp"
-                android:layout_marginTop="22dp">
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:src="@drawable/ic_check"
-                    app:tint="@color/duo_gold_check" />
-            </FrameLayout>
-
-            <!-- 3. Círculo Dorado 3 -->
-            <FrameLayout
-                android:id="@+id/nodo3"
-                android:layout_width="78dp"
-                android:layout_height="78dp"
-                android:layout_below="@id/nodo2"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="-90dp"
-                android:layout_marginTop="22dp">
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:src="@drawable/ic_check"
-                    app:tint="@color/duo_gold_check" />
-            </FrameLayout>
-
-            <!-- PERSONAJE JUGANDO ACOSTADO (Al lado del botón dorado 3 y arriba del botón rosa) -->
-            <ImageView
-                android:id="@+id/ivPersonaje"
-                android:layout_width="160dp"
-                android:layout_height="110dp"
-                android:layout_alignTop="@id/nodo3"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="-15dp"
-                android:layout_toEndOf="@id/nodo3"
-                android:contentDescription="Personaje Duolingo jugando consola"
-                android:src="@drawable/ic_duo_character" />
-
-            <!-- BURBUJA "EMPEZAR" CON FLECHITA ABAJO -->
+            <!-- BANNER SECCIÓN: RETO ACTIVO DEL DÍA (De la web de PRO GYM) -->
             <LinearLayout
-                android:id="@+id/contenedorBurbuja"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/nodo3"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="-60dp"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-black"
+                        android:letterSpacing="0.06"
+                        android:text="🔥 RETO DEL DÍA"
+                        android:textColor="@color/duo_fire"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_duo_speech_bubble"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="Coach Quim"
+                        android:textColor="@color/progym_primary"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/tvEmpezar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_duo_speech_bubble"
-                    android:elevation="3dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="sans-serif-black"
-                    android:letterSpacing="0.06"
-                    android:paddingHorizontal="18dp"
-                    android:paddingVertical="9dp"
-                    android:text="EMPEZAR"
-                    android:textColor="@color/duo_speech_text"
-                    android:textSize="14sp" />
+                    android:text="100 Flexiones + 50 Dominadas"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Supera el récord de la semana para subir a Liga Zafiro"
+                    android:textColor="@color/progym_text_muted"
+                    android:textSize="13sp" />
+
+                <!-- Barra de progreso del reto -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:progress="65"
+                        android:progressTint="@color/progym_secondary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="65%"
+                        android:textColor="@color/progym_secondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- 4. Círculo Rosa Actual (Con ícono de librito abierto) -->
-            <FrameLayout
-                android:id="@+id/nodo4"
-                android:layout_width="78dp"
-                android:layout_height="78dp"
-                android:layout_below="@id/contenedorBurbuja"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="-60dp"
-                android:layout_marginTop="6dp">
-
-                <ImageView
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:src="@drawable/ic_book"
-                    app:tint="@color/white" />
-            </FrameLayout>
-
-            <!-- 5. Círculo Gris Bloqueado 1 (Con candado) -->
-            <FrameLayout
-                android:id="@+id/nodo5"
-                android:layout_width="78dp"
-                android:layout_height="78dp"
-                android:layout_below="@id/nodo4"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="-10dp"
-                android:layout_marginTop="24dp">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:src="@drawable/ic_duo_lock"
-                    app:tint="@color/duo_locked_icon" />
-            </FrameLayout>
-
-            <!-- 6. Círculo Gris Bloqueado 2 -->
-            <FrameLayout
-                android:id="@+id/nodo6"
-                android:layout_width="78dp"
-                android:layout_height="78dp"
-                android:layout_below="@id/nodo5"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="40dp"
+            <!-- TÍTULO: RUTA DE RUTINAS -->
+            <TextView
+                style="@style/ProGym_Titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:layout_marginBottom="32dp">
+                android:layout_marginBottom="12dp"
+                android:text="NIVEL DE RUTINAS"
+                android:textSize="20sp" />
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:src="@drawable/ic_duo_lock"
-                    app:tint="@color/duo_locked_icon" />
-            </FrameLayout>
+            <!-- CAMINO EN ZIGZAG DE RUTINAS (ESTILO DUOLINGO) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
 
-        </RelativeLayout>
+                <!-- 1. Rutina Pecho - Completada (Oro 3D) -->
+                <LinearLayout
+                    android:id="@+id/bloqueRutina1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="-60dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/btnRutina1"
+                        android:layout_width="74dp"
+                        android:layout_height="74dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/ic_check"
+                            app:tint="@color/duo_gold_check" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Pecho &amp; Tríceps"
+                        android:textColor="@color/duo_gold"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- 2. Rutina Espalda - Completada (Oro 3D) -->
+                <LinearLayout
+                    android:id="@+id/bloqueRutina2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bloqueRutina1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/btnRutina2"
+                        android:layout_width="74dp"
+                        android:layout_height="74dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/ic_check"
+                            app:tint="@color/duo_gold_check" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Espalda &amp; Bíceps"
+                        android:textColor="@color/duo_gold"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- BURBUJA FLOTANTE REBOTANDO: "ENTRENAR AHORA" -->
+                <LinearLayout
+                    android:id="@+id/contenedorBurbuja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bloqueRutina2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="-50dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_duo_speech_bubble"
+                        android:elevation="4dp"
+                        android:fontFamily="sans-serif-black"
+                        android:letterSpacing="0.06"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"
+                        android:text="ENTRENAR HOY"
+                        android:textColor="@color/progym_primary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- 3. Rutina Piernas - ACTUAL (Morado Neón 3D con mancuerna) -->
+                <LinearLayout
+                    android:id="@+id/bloqueRutina3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/contenedorBurbuja"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="-50dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/btnRutina3"
+                        android:layout_width="74dp"
+                        android:layout_height="74dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/ic_dumbbell"
+                            app:tint="@color/white" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Día de Pierna"
+                        android:textColor="@color/progym_secondary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- 4. Rutina Hombros - BLOQUEADA (Gris 3D con candado) -->
+                <LinearLayout
+                    android:id="@+id/bloqueRutina4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bloqueRutina3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/btnRutina4"
+                        android:layout_width="74dp"
+                        android:layout_height="74dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/ic_duo_lock"
+                            app:tint="@color/progym_text_muted" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Hombro &amp; Trapecio"
+                        android:textColor="@color/progym_text_muted"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- 5. Examen PRO GYM - BLOQUEADO (Gris 3D) -->
+                <LinearLayout
+                    android:id="@+id/bloqueRutina5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bloqueRutina4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/btnRutina5"
+                        android:layout_width="74dp"
+                        android:layout_height="74dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="4dp"
+                            android:src="@drawable/ic_trophy"
+                            app:tint="@color/progym_text_muted" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Desafío Titán"
+                        android:textColor="@color/progym_text_muted"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- FRASE MOTIVACIONAL AL FINAL (De la página web) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="&quot;El dolor que sientes hoy, es la fuerza que sentirás mañana.&quot;"
+                android:textColor="@color/progym_secondary"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
     </ScrollView>
 
-    <!-- Línea divisoria suave -->
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/duo_border" />
+        android:layout_height="1dp"
+        android:background="@color/progym_divider" />
 
-    <!-- ===== BARRA INFERIOR EXACTA A LA IMAGEN (6 ÍCONOS) ===== -->
+    <!-- ===== BARRA INFERIOR DE 6 ÍCONOS ESTILO DUOLINGO ===== -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:background="@color/white"
+        android:layout_height="66dp"
+        android:background="@color/progym_nav"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingHorizontal="16dp">
 
-        <!-- 1. Home (Casita en caja celeste seleccionada) -->
+        <!-- 1. Home (Seleccionado) -->
         <FrameLayout
             android:id="@+id/navHome"
             android:layout_width="0dp"
@@ -281,7 +460,7 @@
             android:layout_weight="1"
             android:background="@drawable/bg_duo_home_selected" />
 
-        <!-- 2. Audífonos (Morado) -->
+        <!-- 2. Audífonos / Música motivacional -->
         <FrameLayout
             android:id="@+id/navHeadphones"
             android:layout_width="0dp"
@@ -289,14 +468,14 @@
             android:layout_weight="1">
 
             <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_duo_headphones"
-                app:tint="@color/duo_nav_headphones" />
+                app:tint="@color/progym_primary" />
         </FrameLayout>
 
-        <!-- 3. Mancuerna (Celeste brillante) -->
+        <!-- 3. Mancuerna / Rutinas de fuerza -->
         <FrameLayout
             android:id="@+id/navDumbbell"
             android:layout_width="0dp"
@@ -304,14 +483,14 @@
             android:layout_weight="1">
 
             <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_dumbbell"
-                app:tint="@color/duo_nav_dumbbell" />
+                app:tint="@color/progym_secondary" />
         </FrameLayout>
 
-        <!-- 4. Escudo (Marrón/Ocre) -->
+        <!-- 4. Escudo / Ranking Liga -->
         <FrameLayout
             android:id="@+id/navShield"
             android:layout_width="0dp"
@@ -319,14 +498,14 @@
             android:layout_weight="1">
 
             <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_duo_shield"
-                app:tint="@color/duo_nav_shield" />
+                app:tint="@color/duo_fire" />
         </FrameLayout>
 
-        <!-- 5. Trofeo (Dorado) -->
+        <!-- 5. Trofeo / Retos cumplidos -->
         <FrameLayout
             android:id="@+id/navTrophy"
             android:layout_width="0dp"
@@ -334,14 +513,14 @@
             android:layout_weight="1">
 
             <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_trophy"
-                app:tint="@color/duo_nav_trophy" />
+                app:tint="@color/duo_gold" />
         </FrameLayout>
 
-        <!-- 6. Tres puntos (Morado) -->
+        <!-- 6. Perfil / Salir -->
         <FrameLayout
             android:id="@+id/navDots"
             android:layout_width="0dp"
@@ -349,11 +528,11 @@
             android:layout_weight="1">
 
             <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_duo_dots"
-                app:tint="@color/duo_nav_dots" />
+                android:src="@drawable/ic_person"
+                app:tint="@color/progym_text_muted" />
         </FrameLayout>
     </LinearLayout>
 

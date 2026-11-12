@@ -11,16 +11,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PROGYM">
 
-        <!-- MainActivity es la única actividad y arranca directo como pantalla principal -->
+        <!-- Login es la primera pantalla (Launcher) -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Menú principal de ProGym (Rutinas y Retos con interfaz estilo Duolingo) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
