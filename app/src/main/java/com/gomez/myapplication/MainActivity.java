@@ -2,77 +2,126 @@ package com.gomez.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-/**
- * Menú Principal de PRO GYM:
- * Totalmente seguro contra cierres (NullPointerException).
- * Aplica estilos 3D y maneja navegación directa sin fallar.
- */
 public class MainActivity extends AppCompatActivity {
+
+    FrameLayout btnRutina1, btnRutina2, btnRutina3, btnRutina4, btnRutina5;
+    FrameLayout navHome, navHeadphones, navDumbbell, navShield, navTrophy, navDots;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Protección con try-catch para insets
-        try {
-            ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-                Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-                v.setPadding(bars.left, bars.top, bars.right, 0);
-                return insets;
-            });
-        } catch (Exception ignored) {}
+        // Enlazar botones de las rutinas del camino
+        btnRutina1 = findViewById(R.id.btnRutina1);
+        btnRutina2 = findViewById(R.id.btnRutina2);
+        btnRutina3 = findViewById(R.id.btnRutina3);
+        btnRutina4 = findViewById(R.id.btnRutina4);
+        btnRutina5 = findViewById(R.id.btnRutina5);
 
-        aplicarDisenos3D();
-        configurarNavegacion();
-    }
+        // Enlazar botones de la barra inferior
+        navHome = findViewById(R.id.navHome);
+        navHeadphones = findViewById(R.id.navHeadphones);
+        navDumbbell = findViewById(R.id.navDumbbell);
+        navShield = findViewById(R.id.navShield);
+        navTrophy = findViewById(R.id.navTrophy);
+        navDots = findViewById(R.id.navDots);
 
-    private void aplicarDisenos3D() {
-        try {
-            float density = getResources().getDisplayMetrics().density;
-
-            // Paleta segura
-            int gold = 0xFFFFC800;
-            int goldShadow = 0xFFD89B00;
-            int primary = 0xFFA855F7;
-            int primaryDark = 0xFF7F32EB;
-            int locked = 0xFF151528;
-            int lockedShadow = 0xFF0A0A1A;
-
-            FrameLayout btn1 = findViewById(R.id.btnRutina1);
-            FrameLayout btn2 = findViewById(R.id.btnRutina2);
-            FrameLayout btn3 = findViewById(R.id.btnRutina3);
-            FrameLayout btn4 = findViewById(R.id.btnRutina4);
-            FrameLayout btn5 = findViewById(R.id.btnRutina5);
-
-            if (btn1 != null) btn1.setBackground(DuolingoButtonHelper.crearBotonCircular3D(gold, goldShadow, density));
-            if (btn2 != null) btn2.setBackground(DuolingoButtonHelper.crearBotonCircular3D(gold, goldShadow, density));
-            if (btn3 != null) btn3.setBackground(DuolingoButtonHelper.crearBotonCircular3D(primary, primaryDark, density));
-            if (btn4 != null) btn4.setBackground(DuolingoButtonHelper.crearBotonCircular3D(locked, lockedShadow, density));
-            if (btn5 != null) btn5.setBackground(DuolingoButtonHelper.crearBotonCircular3D(locked, lockedShadow, density));
-        } catch (Exception ignored) {}
-    }
-
-    private void configurarNavegacion() {
-        // Redirige al login de regreso al presionar el perfil en la barra inferior
-        try {
-            android.view.View navDots = findViewById(R.id.navDots);
-            if (navDots != null) {
-                navDots.setOnClickListener(v -> {
-                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    finish();
-                });
+        // OnClick de cada botón de rutinas (listos para redirigir cuando estén las pantallas)
+        btnRutina1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí irá el Intent hacia la pantalla de Rutina 1
+                Toast.makeText(MainActivity.this, "Rutina 1", Toast.LENGTH_SHORT).show();
             }
-        } catch (Exception ignored) {}
+        });
+
+        btnRutina2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí irá el Intent hacia la pantalla de Rutina 2
+                Toast.makeText(MainActivity.this, "Rutina 2", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnRutina3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí irá el Intent hacia la pantalla de Rutina 3
+                Toast.makeText(MainActivity.this, "Rutina 3", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnRutina4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí irá el Intent hacia la pantalla de Rutina 4
+                Toast.makeText(MainActivity.this, "Rutina 4", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnRutina5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí irá el Intent hacia la pantalla de Rutina 5
+                Toast.makeText(MainActivity.this, "Rutina 5", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // OnClick de cada botón de la barra inferior
+        navHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Inicio
+            }
+        });
+
+        navHeadphones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí irá el Intent a Música/Audio
+                Toast.makeText(MainActivity.this, "Sección Audio", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        navDumbbell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí irá el Intent a Ejercicios
+                Toast.makeText(MainActivity.this, "Sección Ejercicios", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        navShield.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí irá el Intent a Ranking
+                Toast.makeText(MainActivity.this, "Sección Ranking", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        navTrophy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí irá el Intent a Trofeos
+                Toast.makeText(MainActivity.this, "Sección Trofeos", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        navDots.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirige al Login al presionar el perfil
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

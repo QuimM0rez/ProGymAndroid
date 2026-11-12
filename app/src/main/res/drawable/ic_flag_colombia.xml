@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="20dp"
+    android:viewportWidth="28"
+    android:viewportHeight="20">
+    <!-- Bandera de Colombia: 50% Amarillo, 25% Azul, 25% Rojo -->
+    <!-- Amarillo (0 a 10) -->
+    <path
+        android:fillColor="#FCD116"
+        android:pathData="M 3,0 h 22 a 3,3 0 0 1 3,3 v 7 h -28 v -7 a 3,3 0 0 1 3,-3 z" />
+    <!-- Azul (10 a 15) -->
+    <path
+        android:fillColor="#003893"
+        android:pathData="M 0,10 h 28 v 5 h -28 z" />
+    <!-- Rojo (15 a 20) -->
+    <path
+        android:fillColor="#CE1126"
+        android:pathData="M 0,15 h 28 v 2 a 3,3 0 0 1 -3,3 h -22 a 3,3 0 0 1 -3,-3 z" />
+</vector>
