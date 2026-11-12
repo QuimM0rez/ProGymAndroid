@@ -458,7 +458,14 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_duo_home_selected" />
+            android:background="@drawable/bg_duo_home_selected">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_duo_home_color" />
+        </FrameLayout>
 
         <!-- 2. Audífonos / Música motivacional -->
         <FrameLayout

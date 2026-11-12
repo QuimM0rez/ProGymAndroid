@@ -23,10 +23,10 @@
             </intent-filter>
         </activity>
 
-        <!-- Menú principal de ProGym (Rutinas y Retos con interfaz estilo Duolingo) -->
+        <!-- Menú principal de ProGym -->
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="true" />
     </application>
 
 </manifest>
