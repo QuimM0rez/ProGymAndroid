@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tiendaRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/progym_dark"
+    android:orientation="vertical"
+    tools:context=".TiendaActivity">
+
+    <!-- ===== TOP BAR: PRO GYM ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/progym_nav"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <!-- Botón Volver -->
+        <ImageView
+            android:id="@+id/btnVolver"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="Volver"
+            android:focusable="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:letterSpacing="0.12"
+            android:text="PRO GYM"
+            android:textColor="@color/progym_secondary"
+            android:textSize="20sp" />
+
+        <!-- Bandera Colombia -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="22dp"
+            android:contentDescription="Bandera de Colombia"
+            android:src="@drawable/ic_flag_colombia" />
+    </LinearLayout>
+
+    <!-- ===== CONTENIDO SCROLLABLE DE LA TIENDA ===== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- HEADER TIENDA: PUNTOS DISPONIBLES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Tienda de Recompensas"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mis Puntos: "
+                            android:textColor="@color/progym_text_muted"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvMisPuntos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="750 Puntos"
+                            android:textColor="@color/duo_gem"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Botón Canjear (Pill) -->
+                <TextView
+                    android:id="@+id/btnCanjearPuntos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pill_button"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="sans-serif-bold"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="8dp"
+                    android:text="Canjear"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- ===== PRODUCTO DESTACADO (BOTELLA DEPORTIVA) ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_store_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <!-- Contenedor Blanco de la Imagen (Estilo Mockup) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:background="@drawable/bg_product_card_white"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivProductoDestacado"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="Botella Deportiva PRO GYM"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_botella" />
+                </LinearLayout>
+
+                <!-- Textos del producto -->
+                <TextView
+                    android:id="@+id/tvTituloBotella"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Botella Deportiva"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Hidratación óptima para tus entrenamientos diarios."
+                    android:textColor="@color/progym_text_muted"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="500 Puntos"
+                    android:textColor="@color/progym_secondary"
+                    android:textSize="16sp" />
+
+                <!-- Botón de Canje Degradado -->
+                <Button
+                    android:id="@+id/btnCanjearBotella"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_gradient_button"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="0.04"
+                    android:text="Canjear Ahora"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+
+            <!-- ===== SECCIÓN OTROS PRODUCTOS ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="0.06"
+                android:text="MÁS RECOMPENSAS"
+                android:textColor="@color/progym_primary"
+                android:textSize="14sp" />
+
+            <!-- FILA 1: TOALLA Y CREATINA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- TARJETA: TOALLA -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_store_card"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:background="@drawable/bg_product_card_white"
+                        android:gravity="center"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Toalla de Gimnasio"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_toalla" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-bold"
+                        android:maxLines="1"
+                        android:text="Toalla de Gimnasio"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="300 Puntos"
+                        android:textColor="@color/duo_gem"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnCanjearToalla"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_pill_button"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Canjear"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:backgroundTint="@null" />
+                </LinearLayout>
+
+                <!-- TARJETA: CREATINA -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_store_card"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:background="@drawable/bg_product_card_white"
+                        android:gravity="center"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Creatina Monohidrato"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_creatina" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-bold"
+                        android:maxLines="1"
+                        android:text="Creatina Monohidrato"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="1200 Puntos"
+                        android:textColor="@color/duo_gem"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnCanjearCreatina"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_pill_button"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Canjear"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:backgroundTint="@null" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- FILA 2: PROTEÍNA WHEY -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_store_card"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/bg_product_card_white"
+                    android:gravity="center"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Proteína Whey"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_proteina" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Proteína Whey 2kg"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Máxima recuperación muscular."
+                        android:textColor="@color/progym_text_muted"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="1500 Puntos"
+                        android:textColor="@color/progym_secondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnCanjearProteina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_gradient_button"
+                    android:fontFamily="sans-serif-bold"
+                    android:paddingHorizontal="16dp"
+                    android:text="Canjear"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ===== BOTTOM BAR NAVEGACIÓN ===== -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/progym_nav"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="6dp">
+
+        <!-- 1. Home / Inicio -->
+        <FrameLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_duo_home_color" />
+        </FrameLayout>
+
+        <!-- 2. Auriculares -->
+        <FrameLayout
+            android:id="@+id/navHeadphones"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_duo_headphones"
+                app:tint="@color/progym_text_muted" />
+        </FrameLayout>
+
+        <!-- 3. Mancuerna -->
+        <FrameLayout
+            android:id="@+id/navDumbbell"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_dumbbell"
+                app:tint="@color/progym_text_muted" />
+        </FrameLayout>
+
+        <!-- 4. Escudo -->
+        <FrameLayout
+            android:id="@+id/navShield"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_duo_shield"
+                app:tint="@color/progym_text_muted" />
+        </FrameLayout>
+
+        <!-- 5. Trofeo / Tienda (Activo) -->
+        <FrameLayout
+            android:id="@+id/navTrophy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <View
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_duo_trophy_selected" />
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_trophy"
+                app:tint="@color/duo_gold" />
+        </FrameLayout>
+
+        <!-- 6. Perfil -->
+        <FrameLayout
+            android:id="@+id/navDots"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_person"
+                app:tint="@color/progym_text_muted" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

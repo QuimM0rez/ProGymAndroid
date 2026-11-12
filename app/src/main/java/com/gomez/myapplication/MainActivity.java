@@ -92,7 +92,9 @@ public class MainActivity extends AppCompatActivity {
         binding.navTrophy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Sección Trofeos", Toast.LENGTH_SHORT).show();
+                // Redirige a la Tienda de Recompensas
+                Intent irTienda = new Intent(MainActivity.this, TiendaActivity.class);
+                startActivity(irTienda);
             }
         });
 

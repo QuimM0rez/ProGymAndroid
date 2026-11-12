@@ -27,6 +27,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+        <!-- Tienda de Puntos / Recompensas ProGym -->
+        <activity
+            android:name=".TiendaActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
