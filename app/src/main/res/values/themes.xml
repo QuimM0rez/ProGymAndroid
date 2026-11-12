@@ -1,9 +1,30 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.PROGYM" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <!-- Tema oscuro PRO GYM (morado + cian como la web) -->
+    <style name="Base.Theme.PROGYM" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/progym_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/progym_secondary</item>
+        <item name="colorError">@color/progym_error</item>
+        <item name="android:colorBackground">@color/progym_dark</item>
+        <item name="colorSurface">@color/progym_dark</item>
+        <item name="colorOnSurface">@color/progym_text</item>
+        <item name="android:windowBackground">@color/progym_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 
     <style name="Theme.PROGYM" parent="Base.Theme.PROGYM" />
+
+    <!-- Estilo reutilizable para los campos de texto del login -->
+    <style name="ProGym.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="boxBackgroundColor">@color/progym_input</item>
+        <item name="boxStrokeColor">@color/progym_primary</item>
+        <item name="hintTextColor">@color/progym_secondary</item>
+        <item name="android:textColorHint">@color/progym_text_muted</item>
+        <item name="startIconTint">@color/progym_primary</item>
+        <item name="endIconTint">@color/progym_text_muted</item>
+    </style>
 </resources>

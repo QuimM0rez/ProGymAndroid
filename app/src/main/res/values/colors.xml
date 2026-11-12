@@ -2,4 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta PRO GYM (igual que la página web) -->
+    <color name="progym_primary">#A855F7</color>       <!-- Morado neón -->
+    <color name="progym_primary_dark">#7F32EB</color>
+    <color name="progym_secondary">#00C3FF</color>     <!-- Cian neón -->
+    <color name="progym_dark">#0A0A1A</color>          <!-- Fondo azul oscuro -->
+    <color name="progym_dark_purple">#1B0033</color>
+    <color name="progym_card">#CC0F0F1E</color>        <!-- Tarjeta semitransparente -->
+    <color name="progym_input">#14FFFFFF</color>
+    <color name="progym_text">#E2E8F0</color>
+    <color name="progym_text_muted">#94A3B8</color>
+    <color name="progym_border">#4DA855F7</color>
+    <color name="progym_error">#F87171</color>
 </resources>
