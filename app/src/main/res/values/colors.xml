@@ -10,9 +10,30 @@
     <color name="progym_dark">#0A0A1A</color>          <!-- Fondo azul oscuro -->
     <color name="progym_dark_purple">#1B0033</color>
     <color name="progym_card">#CC0F0F1E</color>        <!-- Tarjeta semitransparente -->
+    <color name="progym_nav">#0F0F1E</color>
     <color name="progym_input">#14FFFFFF</color>
     <color name="progym_text">#E2E8F0</color>
     <color name="progym_text_muted">#94A3B8</color>
     <color name="progym_border">#4DA855F7</color>
+    <color name="progym_divider">#1FFFFFFF</color>
     <color name="progym_error">#F87171</color>
+
+    <!-- Menú estilo Duolingo -->
+    <color name="racha_naranja">#FF9600</color>
+    <color name="vidas_rojo">#FF4B4B</color>
+    <color name="oro">#FFC800</color>
+    <color name="oro_oscuro">#D89B00</color>
+
+    <color name="unidad_morado">#A855F7</color>
+    <color name="unidad_morado_oscuro">#7E22CE</color>
+    <color name="unidad_cian">#00C3FF</color>
+    <color name="unidad_cian_oscuro">#0284C7</color>
+    <color name="unidad_rosa">#EC4899</color>
+    <color name="unidad_rosa_oscuro">#BE185D</color>
+    <color name="unidad_naranja">#F59E0B</color>
+    <color name="unidad_naranja_oscuro">#B45309</color>
+
+    <color name="bloqueado">#37374D</color>
+    <color name="bloqueado_oscuro">#24243A</color>
+    <color name="bloqueado_icono">#6B6B85</color>
 </resources>

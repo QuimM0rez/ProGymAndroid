@@ -14,8 +14,11 @@
 
     <style name="Theme.PROGYM" parent="Base.Theme.PROGYM" />
 
+    <!-- Estilo base ProGym para evitar problemas de jerarquía con el punto -->
+    <style name="ProGym" />
+
     <!-- Estilo reutilizable para los campos de texto del login -->
-    <style name="ProGym.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+    <style name="ProGym_TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
         <item name="boxCornerRadiusTopStart">14dp</item>
         <item name="boxCornerRadiusTopEnd">14dp</item>
         <item name="boxCornerRadiusBottomStart">14dp</item>
@@ -26,5 +29,21 @@
         <item name="android:textColorHint">@color/progym_text_muted</item>
         <item name="startIconTint">@color/progym_primary</item>
         <item name="endIconTint">@color/progym_text_muted</item>
+    </style>
+
+    <!-- Indicador detrás del ícono seleccionado en la barra inferior -->
+    <style name="ProGym_NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">#33A855F7</item>
+    </style>
+
+    <!-- Títulos grandes (similar a Bebas Neue de la web) -->
+    <style name="ProGym_Titulo">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:shadowColor">@color/progym_primary</item>
+        <item name="android:shadowRadius">16</item>
     </style>
 </resources>
