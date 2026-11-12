@@ -20,8 +20,8 @@ public class PerfilFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_perfil, container, false);
 
-        SharedPreferences prefs = requireActivity().getSharedPreferences(LoginActivity.PREFS, Context.MODE_PRIVATE);
-        String correo = prefs.getString(LoginActivity.KEY_CORREO, "atleta@progym.com");
+        SharedPreferences prefs = requireActivity().getSharedPreferences("progym_prefs", Context.MODE_PRIVATE);
+        String correo = prefs.getString("correo", "atleta@progym.com");
         String nombre = correo.contains("@") ? correo.substring(0, correo.indexOf('@')) : correo;
         String inicial = nombre.isEmpty() ? "P" : nombre.substring(0, 1).toUpperCase();
 
@@ -45,10 +45,8 @@ public class PerfilFragment extends Fragment {
         tvNiveles.setText(String.valueOf(Math.max(0, nivelActual - 1)));
 
         btnCerrarSesion.setOnClickListener(v -> {
-            prefs.edit().putBoolean(LoginActivity.KEY_SESION, false).apply();
-            Intent intent = new Intent(requireActivity(), LoginActivity.class);
-            startActivity(intent);
-            requireActivity().finish();
+            prefs.edit().clear().apply();
+            requireActivity().recreate();
         });
 
         return root;

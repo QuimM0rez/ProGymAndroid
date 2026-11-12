@@ -43,7 +43,7 @@ public class InicioFragment extends Fragment implements RutaAdapter.OnNivelClick
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_inicio, container, false);
 
-        prefs = requireActivity().getSharedPreferences(LoginActivity.PREFS, Context.MODE_PRIVATE);
+        prefs = requireActivity().getSharedPreferences("progym_prefs", Context.MODE_PRIVATE);
         cargarDatos();
 
         tvRacha = root.findViewById(R.id.tvRacha);

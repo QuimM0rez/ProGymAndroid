@@ -18,8 +18,8 @@ public class RankingFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_ranking, container, false);
 
-        SharedPreferences prefs = requireActivity().getSharedPreferences(LoginActivity.PREFS, Context.MODE_PRIVATE);
-        String correo = prefs.getString(LoginActivity.KEY_CORREO, "Darlinson");
+        SharedPreferences prefs = requireActivity().getSharedPreferences("progym_prefs", Context.MODE_PRIVATE);
+        String correo = prefs.getString("correo", "Darlinson");
         String nombre = correo.contains("@") ? correo.substring(0, correo.indexOf('@')) : correo;
         int xp = prefs.getInt("progym_xp", 210);
 
