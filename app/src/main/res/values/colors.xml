@@ -2,6 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="negro">#121212</color>
+    <color name="rojo">#FF5722</color>
 
     <!-- PALETA PRO GYM (Web: Neón Morado + Cian Neón + Fondo Oscuro) -->
     <color name="progym_primary">#A855F7</color>       <!-- Morado neón -->

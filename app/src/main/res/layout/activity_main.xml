@@ -121,9 +121,12 @@
 
             <!-- BANNER SECCIÓN: RETO ACTIVO DEL DÍA (De la web de PRO GYM) -->
             <LinearLayout
+                android:id="@+id/cardReto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_card"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical"
                 android:padding="18dp">
 
@@ -467,18 +470,20 @@
                 android:src="@drawable/ic_duo_home_color" />
         </FrameLayout>
 
-        <!-- 2. Audífonos / Música motivacional -->
+        <!-- 2. Tienda de Puntos / Recompensas -->
         <FrameLayout
-            android:id="@+id/navHeadphones"
+            android:id="@+id/navTienda"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
 
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_duo_headphones"
+                android:src="@drawable/ic_store"
                 app:tint="@color/progym_primary" />
         </FrameLayout>
 

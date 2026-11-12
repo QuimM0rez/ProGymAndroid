@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro"
+    android:orientation="vertical"
+    tools:context=".Desafio">
+
+    <!-- Top Bar con botón volver -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btnVolver"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="Volver"
+            android:focusable="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:letterSpacing="0.08"
+            android:text="DESAFÍO PRO GYM"
+            android:textColor="@color/rojo"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:text="🏋️‍♂️ Desafio del Gimnasio 🏋️‍♀️"
+        android:textColor="@color/rojo"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:text="Selecciona un usuario para registrar su desafio completado"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:text="⚠️ No se pudieron cargar los usuarios. Verifica tu conexión."
+        android:textColor="@color/rojo"
+        android:textSize="14sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <Button
+        android:id="@+id/btnVolverMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/rojo"
+        android:fontFamily="sans-serif-bold"
+        android:paddingHorizontal="24dp"
+        android:text="Volver al Menú Principal"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</LinearLayout>

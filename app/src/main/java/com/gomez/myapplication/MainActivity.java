@@ -53,10 +53,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Reto activo del día (abre Desafío de Sebastián)
+        binding.cardReto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent irDesafio = new Intent(MainActivity.this, Desafio.class);
+                startActivity(irDesafio);
+            }
+        });
+
         binding.btnRutina5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Rutina 5", Toast.LENGTH_SHORT).show();
+                // Nodo Desafío Titán (abre Desafío de Sebastián)
+                Intent irDesafio = new Intent(MainActivity.this, Desafio.class);
+                startActivity(irDesafio);
             }
         });
 
@@ -68,10 +79,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        binding.navHeadphones.setOnClickListener(new View.OnClickListener() {
+        // 2. Icono de Tienda (abre la Tienda de Recompensas)
+        binding.navTienda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Sección Audio", Toast.LENGTH_SHORT).show();
+                Intent irTienda = new Intent(MainActivity.this, TiendaActivity.class);
+                startActivity(irTienda);
             }
         });
 
@@ -89,12 +102,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 5. Trofeo / Desafíos (abre Desafío del Gimnasio)
         binding.navTrophy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Redirige a la Tienda de Recompensas
-                Intent irTienda = new Intent(MainActivity.this, TiendaActivity.class);
-                startActivity(irTienda);
+                Intent irDesafio = new Intent(MainActivity.this, Desafio.class);
+                startActivity(irDesafio);
             }
         });
 

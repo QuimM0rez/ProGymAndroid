@@ -32,6 +32,11 @@
         <activity
             android:name=".TiendaActivity"
             android:exported="true" />
+
+        <!-- Desafío del Gimnasio (Módulo Sebastián) -->
+        <activity
+            android:name=".Desafio"
+            android:exported="true" />
     </application>
 
 </manifest>

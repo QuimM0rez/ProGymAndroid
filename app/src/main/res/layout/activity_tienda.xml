@@ -433,21 +433,27 @@
                 android:src="@drawable/ic_duo_home_color" />
         </FrameLayout>
 
-        <!-- 2. Auriculares -->
+        <!-- 2. Tienda (Activo) -->
         <FrameLayout
-            android:id="@+id/navHeadphones"
+            android:id="@+id/navTienda"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true">
 
+            <View
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_duo_store_selected" />
+
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_duo_headphones"
-                app:tint="@color/progym_text_muted" />
+                android:src="@drawable/ic_store"
+                app:tint="@color/progym_secondary" />
         </FrameLayout>
 
         <!-- 3. Mancuerna -->
@@ -484,7 +490,7 @@
                 app:tint="@color/progym_text_muted" />
         </FrameLayout>
 
-        <!-- 5. Trofeo / Tienda (Activo) -->
+        <!-- 5. Trofeo / Desafíos -->
         <FrameLayout
             android:id="@+id/navTrophy"
             android:layout_width="0dp"
@@ -492,12 +498,6 @@
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true">
-
-            <View
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:layout_gravity="center"
-                android:background="@drawable/bg_duo_trophy_selected" />
 
             <ImageView
                 android:layout_width="26dp"

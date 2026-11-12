@@ -85,10 +85,11 @@ public class TiendaActivity extends AppCompatActivity {
             }
         });
 
-        binding.navHeadphones.setOnClickListener(new View.OnClickListener() {
+        // 2. Icono de Tienda (actual)
+        binding.navTienda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(TiendaActivity.this, "Sección Audio", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TiendaActivity.this, "Ya estás en la Tienda de Recompensas", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -108,10 +109,12 @@ public class TiendaActivity extends AppCompatActivity {
             }
         });
 
+        // 5. Trofeo / Desafíos (abre Desafío del Gimnasio)
         binding.navTrophy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(TiendaActivity.this, "Ya estás en la Tienda de Recompensas", Toast.LENGTH_SHORT).show();
+                Intent irDesafio = new Intent(TiendaActivity.this, Desafio.class);
+                startActivity(irDesafio);
             }
         });
 
