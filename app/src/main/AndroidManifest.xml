@@ -37,6 +37,11 @@
         <activity
             android:name=".Desafio"
             android:exported="true" />
+
+        <!-- Ranking de la Liga (Módulo Quim) -->
+        <activity
+            android:name=".Ranking"
+            android:exported="true" />
     </application>
 
 </manifest>

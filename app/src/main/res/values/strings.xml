@@ -22,4 +22,26 @@
     <string name="error_credenciales">Correo o contraseña incorrectos</string>
     <string name="msg_bienvenida">¡Bienvenido de nuevo a PRO GYM! 💪</string>
     <string name="msg_proximamente">Próximamente disponible</string>
+
+    <!-- Strings de Ranking (Quim) -->
+    <string name="titulo1Menu">Bienvenidos a Pro Gym</string>
+    <string name="titulo1ranking">RANKING DE LA LIGA</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="diamante_david">DIAMANTE - David</string>
+    <string name="oro_username_02">ORO - USERNAME_02</string>
+    <string name="plata_username_03">PLATA - USERNAME_03</string>
+    <string name="bronce_username_04">BRONCE - USERNAME_04</string>
+    <string name="bronce_username_05">BRONCE - USERNAME_05</string>
+    <string name="_42_500">⭐ 42,500 XP</string>
+    <string name="_35_100">⭐ 35,100 XP</string>
+    <string name="_29_305">⭐ 29,305 XP</string>
+    <string name="_25_260">⭐ 25,260 XP</string>
+    <string name="_19_250">⭐ 19,250 XP</string>
+    <string name="avatar">Avatar</string>
+    <string name="avatar2">Avatar</string>
+    <string name="avatar3">Avatar</string>
 </resources>

@@ -95,10 +95,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 4. Escudo / Ranking Liga (abre Ranking de Quim)
         binding.navShield.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Sección Ranking", Toast.LENGTH_SHORT).show();
+                Intent irRanking = new Intent(MainActivity.this, Ranking.class);
+                startActivity(irRanking);
             }
         });
 
