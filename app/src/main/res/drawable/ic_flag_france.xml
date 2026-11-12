@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="20dp"
+    android:viewportWidth="28"
+    android:viewportHeight="20">
+    <!-- Bandera de Francia / ProGym con borde redondeado -->
+    <path
+        android:fillColor="#0055A4"
+        android:pathData="M3,0 h7 v20 h-7 a3,3 0 0 1 -3,-3 v-14 a3,3 0 0 1 3,-3 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M10,0 h8 v20 h-8 z" />
+    <path
+        android:fillColor="#EF4135"
+        android:pathData="M18,0 h7 a3,3 0 0 1 3,3 v14 a3,3 0 0 1 -3,3 h-7 z" />
+</vector>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="28"
+    android:viewportHeight="28">
+    <!-- Casita con techo rojo y puerta amarilla de Duolingo -->
+    <path
+        android:fillColor="#FFC800"
+        android:pathData="M 6,12 L 22,12 L 22,24 L 6,24 Z" />
+    <path
+        android:fillColor="#FF4B4B"
+        android:pathData="M 14,3 L 3,13 L 25,13 Z" />
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M 11,16 L 17,16 L 17,24 L 11,24 Z" />
+</vector>
